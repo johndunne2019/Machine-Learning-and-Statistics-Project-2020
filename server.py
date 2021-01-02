@@ -5,8 +5,6 @@
 
 # flask for web app.
 import flask as fl
-# numpy for numerical work.
-import numpy as np
 
 # Create a new web app.
 app = fl.Flask(__name__)
@@ -18,6 +16,6 @@ def home():
   return app.send_static_file('index.html')
 
 # Add root to return power value for wind speed entered by user
-@app.route('/api/uniform')
-def uniform():
-  return {"value": np.random.uniform()}
+#@app.route('/api/uniform')
+#def uniform():
+  #return "test" #{"value": np.random.uniform()}
