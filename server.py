@@ -23,5 +23,6 @@ def home():
   #return "test" #{"value": np.random.uniform()}
 
 # run the app when script is run from command line
+# debug mode is on, the server will reload if any changes made to the file 
 if __name__ == '__main__' :
     app.run(debug= True)

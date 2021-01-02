@@ -13,7 +13,7 @@ Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install
 
 This repository contains a server which should be run in a virtual environment.
 
-## Running a VM for the first time on your machine
+## Instructions to create and run a virtual environment for the first time on your machine
 
 #### The command to install a virtual environment on your machine for the first time is:
 
@@ -25,7 +25,13 @@ python -m venv venv
 
 #### Install the required packages:
 
+The required packages to run this web application are listed in a txt file called requirements.txt in this repository. 
+
+Instill the packages in your virtual environment with the command:
+
 pip install -r requirements.txt
+
+#### Pip warning
 
 I got the below message when I created a virtual environment on my machine.
 
@@ -34,7 +40,10 @@ You should consider upgrading via the 'c:\users\john\desktop\machine-learning-an
 
 #### Run my server
 
-python server.py
+To get the server I have written up and running in the virtual environment use the commands below
+
+1. set FLASK_APP=hello.py
+2. python -m flask run
 
 #### To exit the virtual environment:
 
