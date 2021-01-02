@@ -4,10 +4,12 @@
 # Adapted from lecture series example - https://github.com/ianmcloughlin/random-app/blob/master/rando.py
 
 # flask for web app.
-import flask as fl
+#import flask as fl
+from flask import Flask
 
 # Create a new web app.
-app = fl.Flask(__name__)
+#app = fl.Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='static')
 
 # Add root route.
 # This will serve out the index.html page at the root
@@ -19,3 +21,7 @@ def home():
 #@app.route('/api/uniform')
 #def uniform():
   #return "test" #{"value": np.random.uniform()}
+
+# run the app when script is run from command line
+if __name__ == '__main__' :
+    app.run(debug= True)
