@@ -7,6 +7,14 @@
 #import flask as fl
 from flask import Flask
 
+# import keras and load the saved model
+# tensorflow documentation on saving and loading a model - https://www.tensorflow.org/guide/keras/save_and_serialize
+from tensorflow import keras
+model = keras.models.load_model("model.h5")
+
+# test the model is returning a prediction 
+print(model.predict([25]))
+
 # Create a new web app.
 #app = fl.Flask(__name__)
 app = Flask(__name__, static_url_path='', static_folder='static')

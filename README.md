@@ -42,7 +42,7 @@ You should consider upgrading via the 'c:\users\john\desktop\machine-learning-an
 
 To get the server I have written up and running in the virtual environment use the commands below
 
-1. set FLASK_APP=hello.py
+1. set FLASK_APP=server.py
 2. python -m flask run
 
 #### To exit the virtual environment:
