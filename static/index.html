@@ -13,23 +13,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+         <!-- title of document -->
         <title>Index - user front end </title>
+
+        <!-- CSS styles added below-->
+         <!-- I have added a style for the body of the page and the heading -->
+        <style type = "text/css"> 
+            .body {
+                background-color: #9e9e9ebd;
+                font-family: Calibri;
+		        font-size: 20px;
+                border-style: solid;
+		        border-color: black;
+		        border-width: 5px;
+                }
+            .headings {
+		        text-align: center;
+		        margin: 10px;
+		        color: white;
+		        background-color: #2200ffb3;
+		        font-family: Calibri;
+		        font-size: 40px;
+		        padding: 30px;
+		        border-style: solid;
+		        border-color: black;
+		        border-width: 5px;
+	            }
+        </style> 
     </head>
-    <body>
-        <h1>Welcome to Power Production output predictor</h1>
+     <!-- CSS style added to body of page-->
+    <body class="body">
+         <!-- CSS style added to main heading -->
+        <h1 class="headings">Welcome to Power Production output predictor</h1>
         <br/>
         <br/>
         <!-- div containing an input text box to take the user's wind speed -->
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                    <!-- I have added a paragraph explaining the purpose of the webpage -->
                     <p>This web service allows you to enter a wind speed and have a predicted power output for that wind speed returned. The predicted power output returned is based on a  Keras neural network
                         model that I have trained using the power production data set. 
                         <br/>
                         <br/>
                         Further details are available at my Github repository for this project: https://github.com/johndunne2019/Machine-Learning-and-Statistics-Project-2020
                     </p>
+                     <!-- Ask the user to enter a wind speed and click the button -->
                     <p>Please enter an integer value between 1 and 25 for wind speed below and click the button to see the predicted power output:</p>
                     <input class="form-control" id="input" type="text" placeholder="Enter wind speed here..">
                 </div>
@@ -49,10 +78,13 @@
                 <div class="col-sm">
                     <p>The predicted power output for your wind speed will be output below:</p>
                     <input class="form-control" id="output" type="text" placeholder="Predicted power output">
+                    <br/>
+                    <br/>
                 </div>
             </div>
         </div>
 
+        <!-- Sourced from lecture example - https://github.com/ianmcloughlin/random-app/blob/master/static/index.html -->
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
