@@ -9,6 +9,19 @@ Docker is .....
 
 Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install/
 
+# requirements.txt
+
+The requirements to run this project are listed in a requirements.txt file in my repository. 
+
+I created a virtual environment and installed the required packages below:
+
+* pip install flask
+* pip install numpy
+* pip install tensorflow
+* pip install -U scikit-learn
+
+The command - pip install -r requirements.txt - can be used to install all required packages in a virtual environment on your own local machine.
+
 # Virtual Environment 
 
 This repository contains a server which should be run in a virtual environment.
