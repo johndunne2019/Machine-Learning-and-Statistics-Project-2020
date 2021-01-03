@@ -18,30 +18,41 @@
     </head>
     <body>
         <h1>Welcome to Power Production output predictor</h1>
-
+        <br/>
+        <br/>
         <!-- div containing an input text box to take the user's wind speed -->
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                    <p>This web service allows you to enter a wind speed and have a predicted power output for that wind speed returned. The predicted power output returned is based on a  Keras neural network
+                        model that I have trained using the power production data set. 
+                        <br/>
+                        <br/>
+                        Further details are available at my Github repository for this project: https://github.com/johndunne2019/Machine-Learning-and-Statistics-Project-2020
+                    </p>
+                    <p>Please enter an integer value between 1 and 25 for wind speed below and click the button to see the predicted power output:</p>
                     <input class="form-control" id="input" type="text" placeholder="Enter wind speed here..">
                 </div>
             </div>
-
+            <br/>
+            <br/>
             <!-- Button that calls javascript function to return prediction -->
             <div class="row">
                 <div class="col-sm">
                     <button class="btn btn-success" onclick="getAllAjax()" >Predict Power Output</button>
                 </div>
             </div>
-
+            <br/>
+            <br/>
             <!-- div with text box to display the predicted power output value -->
             <div class="row">
                 <div class="col-sm">
+                    <p>The predicted power output for your wind speed will be output below:</p>
                     <input class="form-control" id="output" type="text" placeholder="Predicted power output">
                 </div>
             </div>
         </div>
-        
+
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

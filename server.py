@@ -40,5 +40,5 @@ def predict(x):
 # from stack overflow - https://stackoverflow.com/questions/26646362/numpy-array-is-not-json-serializable
 
 # debug mode turned on for testing purposes, commented out in final production version
-#if __name__ == '__main__' :
-   #app.run(debug= True)
+if __name__ == '__main__' :
+  app.run(debug= True)
