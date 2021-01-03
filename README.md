@@ -17,7 +17,7 @@ I created a virtual environment and installed the required packages below:
 
 * pip install flask
 * pip install numpy
-* pip install tensorflow
+* pip install tensorflow or conda install tensorflow if this fails
 * pip install -U scikit-learn
 
 The command - pip install -r requirements.txt - can be used to install all required packages in a virtual environment on your own local machine.
@@ -25,6 +25,12 @@ The command - pip install -r requirements.txt - can be used to install all requi
 # Virtual Environment 
 
 This repository contains a server which should be run in a virtual environment.
+
+Error importing tensorflow have to investigate further.
+
+ImportError: DLL load failed while importing _pywrap_tensorflow_internal: A dynamic link library (DLL) initialization routine failed.
+
+conda install tensorflow solves the issue  - https://stackoverflow.com/questions/49932993/importerror-dll-load-failed-a-dynamic-link-library-dll-initialization-routin
 
 ## Instructions to create and run a virtual environment for the first time on your machine
 
@@ -50,6 +56,14 @@ I got the below message when I created a virtual environment on my machine.
 
 WARNING: You are using pip version 20.1.1; however, version 20.3.3 is available.
 You should consider upgrading via the 'c:\users\john\desktop\machine-learning-and-statistics-project-2020\venv\scripts\python.exe -m pip install --upgrade pip' command.
+
+To check your current version of pip :
+
+* pip --version
+
+To upgrade pip on your machine
+
+* python -m pip install --upgrade pip
 
 #### Run my server
 
