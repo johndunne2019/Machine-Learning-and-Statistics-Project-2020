@@ -32,12 +32,13 @@ def home():
 # curl "http://127.0.0.1:5000/predict/20
 # object of type ndarray is not JSON serializable error was returned at first, I added new return statement with prediction returned as a string
 # from stack overflow - https://stackoverflow.com/questions/26646362/numpy-array-is-not-json-serializable
+# added a second app route to handle floating point numbers using same function to call model.predict 
 @app.route('/predict/<int:x>', methods=['GET'])
+@app.route('/predict/<float:x>', methods=['GET'])
 def predict(x):
   prediction = model.predict([x])
   #return {"predicted power output": str(prediction[0][0])}
   return str(prediction[0][0])
-
 
 # debug mode turned on for testing purposes, commented out in final production version
 #if __name__ == '__main__' :

@@ -17,7 +17,7 @@
         <title>Index - user front end </title>
 
         <!-- CSS styles added below-->
-         <!-- I have added a style for the body of the page and the heading -->
+        <!-- I have added a style for the body of the page and the heading -->
         <style type = "text/css"> 
             .body {
                 background-color: #9e9e9ebd;
@@ -53,35 +53,35 @@
                 <div class="col-sm">
                     <!-- I have added a paragraph explaining the purpose of the webpage -->
                     <p>This web service allows you to enter a wind speed and have a predicted power output for that wind speed returned. The predicted power output returned is based on a  Keras neural network
-                        model that I have trained using the power production data set. 
+                        model that I have trained using the power production data set. As this model is only trained on wind speeds in the range of 1 and 25 then it can only handle predictions in the same range.
                         <br/>
                         <br/>
                         Further details are available at my Github repository for this project: https://github.com/johndunne2019/Machine-Learning-and-Statistics-Project-2020
                     </p>
                      <!-- Ask the user to enter a wind speed and click the button -->
-                    <p>Please enter an integer value between 1 and 25 for wind speed below and click the button to see the predicted power output:</p>
+                    <p>Please enter any integer or floating point value between 1 and 25 for wind speed below and click the button to see the predicted power output:</p>
                     <input class="form-control" id="input" type="text" placeholder="Enter wind speed here..">
                 </div>
-            </div>
-            <br/>
-            <br/>
-            <!-- Button that calls javascript function to return prediction -->
-            <div class="row">
-                <div class="col-sm">
-                    <button class="btn btn-success" onclick="getAllAjax()" >Predict Power Output</button>
                 </div>
-            </div>
-            <br/>
-            <br/>
-            <!-- div with text box to display the predicted power output value -->
-            <div class="row">
-                <div class="col-sm">
-                    <p>The predicted power output for your wind speed will be output below:</p>
-                    <input class="form-control" id="output" type="text" placeholder="Predicted power output">
-                    <br/>
-                    <br/>
+                <br/>
+                <br/>
+                <!-- Button that calls javascript function to return prediction -->
+                <div class="row">
+                    <div class="col-sm">
+                        <button class="btn btn-success" onclick="getAllAjax()" >Predict Power Output</button>
+                    </div>
                 </div>
-            </div>
+                <br/>
+                <br/>
+                <!-- div with text box to display the predicted power output value -->
+                <div class="row">
+                    <div class="col-sm">
+                        <p>The predicted power output for your wind speed will be output below:</p>
+                        <input class="form-control" id="output" type="text" placeholder="Predicted power output">
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
         </div>
 
         <!-- Sourced from lecture example - https://github.com/ianmcloughlin/random-app/blob/master/static/index.html -->
@@ -105,10 +105,11 @@
         host = window.location.origin
       
         function getAllAjax(){
-            // variable p set equal to contents of input text box
+            // variable p set equal to contents of input text box returned by accessing through DOM
             p = Number(document.getElementById("input").value); 
 
             // Ajax call to return the value from the app route of /predict/ plus the user entered number in input text box
+            // the prediction returned from the app route is displayed in the output text box by DOM accessing contents of output text box 
             $.ajax({
                 "url": host+"/predict/" + p,
                 "method":"GET",
@@ -119,7 +120,7 @@
                     output = document.getElementById("output");
                     output.value=result;
                 },
-                // error handling added
+                // error handling added, error will be output on console
                 "error":function(xhr,status,error){
                     console.log("error: "+status+" msg:"+error);
                 }
