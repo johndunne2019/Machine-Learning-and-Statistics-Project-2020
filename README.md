@@ -1,6 +1,8 @@
 # Machine-Learning-and-Statistics-Project-2020
 My project submission for the Machine Learning and Statistics module at GMIT
 
+Author - John Dunne G00273895
+
 ## About this Repository
 
 This repository contains the resources required to run a web service that uses machine learning to make predictions based on the data in the power production data set. Further details on the contents of this repository can be seen in the next section below.
@@ -9,12 +11,44 @@ This repository contains the resources required to run a web service that uses m
 
 I have listed below the contents of this repository and a short description on each:
 
-**Project-Machine-Learning-Statitics.ipynb**
+**Project-Machine-Learning-Statistics.ipynb**
 
-* An introduction to the power production data set
-* An introduction to artificial neural networks
-* Training a Keras neural network
-* Making predictions on unseen data with the neural network
+Jupyter notebook containing among other things:
+
+* An introduction to the power production data set.
+* An introduction to artificial neural networks.
+* Training a Keras neural network.
+* Making predictions on unseen data with the neural network.
+* Analysing the accuracy of the predictions.
+
+**model.h5**
+
+Keras neural network model saved with model.save command in jupyter notebook.
+
+**server.py**
+
+Python file that runs a flask server which serves out the predictions from the neural network at a specified app route on the web browser at local host.
+
+**static**
+
+Folder containing index.html which is the user front end for my API. Ajax function returns the prediction to the index.html from the app route specified in server.py
+
+**img**
+
+Folder containing images that are displayed in the jupyter notebook.
+
+**.gitignore**
+
+Contents of the file are ignored by Github.
+
+**requirements.txt**
+
+List of required packages needed to run this application. I compiled the list from a virtual environment using the command pip freeze > requirements.txt
+
+**Dockerfile**
+
+**.dockerignore**
+
 
 
 
