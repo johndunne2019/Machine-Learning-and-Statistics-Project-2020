@@ -7,6 +7,20 @@ Author - John Dunne G00273895
 
 This repository contains the resources required to run a web service that uses machine learning to make predictions based on the data in the power production data set. Further details on the contents of this repository can be seen in the next section below.
 
+## Running this web service on your local machine - quick start guide
+
+A quick start guide to getting this web application up and running on your local machine.
+
+I have included further details on each component later in this Readme file. 
+
+1. Pull the latest version of my repository from Github.
+2. Navigate to the folder on your local machine.
+3. set FLASK_APP=server.py
+4. python -m flask run
+5. When server is running open local host in your web browser at - http://127.0.0.1:5000/
+6. Enter your wind speed and click the Predict Power Output button to receive power output prediction.
+7. When you are finished close the local host and Ctrl + C on your command line to kill the web server.
+
 ## Contents of this Repository
 
 I have listed below the contents of this repository and a short description on each:
