@@ -11,7 +11,7 @@ This repository contains the resources required to run a web service that uses m
 
 I have listed below the contents of this repository and a short description on each:
 
-**Project-Machine-Learning-Statistics.ipynb**
+#### Project-Machine-Learning-Statistics.ipynb
 
 Jupyter notebook containing among other things:
 
@@ -21,11 +21,11 @@ Jupyter notebook containing among other things:
 * Making predictions on unseen data with the neural network.
 * Analysing the accuracy of the predictions.
 
-**model.h5**
+#### model.h5
 
 Keras neural network model saved with model.save command in jupyter notebook.
 
-**server.py**
+#### server.py
 
 Python file that runs a flask server which serves out the predictions from the neural network at a specified app route on the web browser at local host.
 
@@ -33,26 +33,25 @@ Python file that runs a flask server which serves out the predictions from the n
 
 Folder containing index.html which is the user front end for my API. Ajax function returns the prediction to the index.html from the app route specified in server.py
 
-**img**
+#### img
 
 Folder containing images that are displayed in the jupyter notebook.
 
-**.gitignore**
+#### .gitignore
 
 Contents of the file are ignored by Github.
 
-**requirements.txt**
+#### requirements.txt
 
 List of required packages needed to run this application. I compiled the list from a virtual environment using the command pip freeze > requirements.txt
 
-**Dockerfile**
+#### Dockerfile
 
 File containing the commands to build a docker image of the web service in this repository.
 
-**.dockerignore**
+#### .dockerignore
 
 Contents of this file are ignored by Docker.
-
 
 ## Difficulty displaying jupyter notebook on Github website
 
@@ -89,25 +88,25 @@ This repository contains a Dockerfile which will allow you to build a docker ima
 
 Check you have Docker installed by running the below on your command line:
 
-docker --version
+* docker --version
 
 If Docker is not installed visit:
 
-Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install/
+* Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install/
 
 **Building a Docker Image**
 
 A docker image is a template from which a docker container can be built.
 
-To build a docker container in this repository navigate to the folder location and:
+To build a docker image in this repository navigate to the folder location on command line and type:
 
-docker built -t predictions-app .
+* docker build -t predictions-app .
 
-I have given the container a name which is my student number.
+I have given the container an ID here before the final dot 
 
 To see the docker image that has been built:
 
-docker image ls
+* docker image ls
 
 **Running a docker container**
 
@@ -115,7 +114,7 @@ A container is an instance of a docker image.
 
 To create a container:
 
-docker run -d -p 5000:5000 predictions-app
+* docker run -d -p 5000:5000 predictions-app
 
 -d tells docker to run in the background.
 
@@ -123,11 +122,11 @@ docker run -d -p 5000:5000 predictions-app
 
 **other commands**
 
-To see all containers by their ID: docker container ls
+* To see all containers by their ID: docker container ls
 
-To kill a container: docker kill container ID
+* To kill a container: docker kill container ID
 
-Delete a container: docker rm container ID
+* Delete a container: docker rm container ID
 
 ## requirements.txt
 
@@ -144,23 +143,21 @@ The command - pip install -r requirements.txt - can be used to install all requi
 
 ## Virtual Environment 
 
-This repository contains a server which should be run in a virtual environment.
+I created a virtual environment on my machine. In this virtual environment I installed the required packages for running this repository and populated the requirements.txt file with the command pip freeze > requirements.txt. 
 
-Error importing tensorflow have to investigate further.
+I added the venv to my .gitignore file so it would not be pushed to Github.
 
-ImportError: DLL load failed while importing _pywrap_tensorflow_internal: A dynamic link library (DLL) initialization routine failed.
+### Instructions to create and run a virtual environment for the first time on your machine
 
-conda install tensorflow solves the issue  - https://stackoverflow.com/questions/49932993/importerror-dll-load-failed-a-dynamic-link-library-dll-initialization-routin
-
-## Instructions to create and run a virtual environment for the first time on your machine
+I have included below the instructions to create a venv and get it up and running on your local machine.
 
 #### The command to install a virtual environment on your machine for the first time is:
 
-python -m venv venv
+* python -m venv venv
 
 #### To activate the virtual environment: 
 
-.\venv\Scripts\activate.bat
+* .\venv\Scripts\activate.bat
 
 #### Install the required packages:
 
@@ -168,7 +165,7 @@ The required packages to run this web application are listed in a txt file calle
 
 Instill the packages in your virtual environment with the command:
 
-pip install -r requirements.txt
+* pip install -r requirements.txt
 
 #### Pip warning
 
