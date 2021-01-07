@@ -47,9 +47,11 @@ List of required packages needed to run this application. I compiled the list fr
 
 **Dockerfile**
 
+File containing the commands to build a docker image of the web service in this repository.
+
 **.dockerignore**
 
-
+Contents of this file are ignored by Docker.
 
 
 ## Difficulty displaying jupyter notebook on Github website
@@ -85,9 +87,47 @@ When you have finished viewing the jupyter notebook close the web browser and re
 
 This repository contains a Dockerfile which will allow you to build a docker image on your own machine in order to run a version of this web service.
 
-Docker is .....
+Check you have Docker installed by running the below on your command line:
+
+docker --version
+
+If Docker is not installed visit:
 
 Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install/
+
+**Building a Docker Image**
+
+A docker image is a template from which a docker container can be built.
+
+To build a docker container in this repository navigate to the folder location and:
+
+docker built -t predictions-app .
+
+I have given the container a name which is my student number.
+
+To see the docker image that has been built:
+
+docker image ls
+
+**Running a docker container**
+
+A container is an instance of a docker image.
+
+To create a container:
+
+docker run -d -p 5000:5000 predictions-app
+
+-d tells docker to run in the background.
+
+-p 5000 - port 5000 will run on the linux machine and your own machine at the same time.
+
+**other commands**
+
+To see all containers by their ID: docker container ls
+
+To kill a container: docker kill container ID
+
+Delete a container: docker rm container ID
 
 ## requirements.txt
 
