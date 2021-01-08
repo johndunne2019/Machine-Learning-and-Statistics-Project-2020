@@ -21,6 +21,21 @@ I have included further details on each component later in this Readme file.
 6. Enter your wind speed and click the Predict Power Output button to receive power output prediction.
 7. When you are finished close the local host and Ctrl + C on your command line to kill the web server.
 
+## Building a Docker Image and running a container - quick start guide
+
+Further detailed instructions later in this Readme file.
+
+1. Pull the latest version of the repository from Github.
+2. Navigate to the folder on your local machine.
+3. If you have docker installed you can check your version with the command - docker --version
+4. docker build -t predictions-app to build a docker image (this may take a while).
+5. docker image ls to see the image once it is built.
+6. docker run -d -p 5000:5000 predictions-app to get a container running your local host.
+7. Go to http://127.0.0.1:5000/ to see the web app. 
+8. docker container ls - To see details on a container including the container ID.
+9. docker kill container ID - To kill a docker container
+9. docker container ls - to see all containers currently running.
+
 ## Contents of this Repository
 
 I have listed below the contents of this repository and a short description on each:
@@ -104,6 +119,8 @@ Check you have Docker installed by running the below on your command line:
 
 * docker --version
 
+![dockerversion](/img/Docker--version.PNG)
+
 If Docker is not installed visit:
 
 * Installing Docker on Windows: https://docs.docker.com/docker-for-windows/install/
@@ -116,23 +133,29 @@ To build a docker image in this repository navigate to the folder location on co
 
 * docker build -t predictions-app .
 
+![dockerbuild](/img/DockerBuildImage.PNG)
+
 I have given the container an ID here before the final dot 
 
 To see the docker image that has been built:
 
 * docker image ls
 
+![dockerimagels](/img/DockerImagels.PNG)
+
 **Running a docker container**
 
 A container is an instance of a docker image.
 
-To create a container:
+To get a container running on your machine:
 
 * docker run -d -p 5000:5000 predictions-app
 
 -d tells docker to run in the background.
 
 -p 5000 - port 5000 will run on the linux machine and your own machine at the same time.
+
+![dockerrun](/img/DockerRun.PNG)
 
 **other commands**
 
