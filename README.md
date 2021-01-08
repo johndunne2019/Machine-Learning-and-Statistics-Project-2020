@@ -229,3 +229,9 @@ To get the server I have written up and running in the virtual environment use t
 #### To exit the virtual environment:
 
 deactivate
+
+## Image of web service up and running
+
+![webapp1](/img/WebApp1.PNG)
+
+![webapp2](/img/WebApp2.PNG)
